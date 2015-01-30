@@ -65,12 +65,18 @@
         float:left;
     }
     #content-left {
-        width:700px;
+        width:600px;
         font:15px Arial;
     }
     #content-main {
         margin-left:10px;
-        width:200px;
+        width:250px;
+        font:15px Arial;
+        text-align:center;
+    }
+    #content-right {
+        margin-left:10px;
+        width:250px;
         font:15px Arial;
         text-align:center;
     }
