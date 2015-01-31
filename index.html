@@ -1,7 +1,7 @@
 <!Doctype html>
 
 <head>
-  <title>Ethan Wilberforce</title>
+  <title>Pool Seeder</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
@@ -42,16 +42,16 @@
       <div id="content">
         <div id="content-left">
           <p>
-            Enter entrants tags separated by commas (ex/ Ethan, M2K, Mango, Leffen, etc)
+            Enter entrants tags separated by commas (ex/ Ethan,M2K,Mango,Leffen, etc ), listed in order of seed priority
           </p>
-          <textarea rows="10" cols="96"></textarea>
+          <textarea id="textraw" rows="10" cols="96">Ethan,Jim,Fred,Steve,Craig,Phil,Adnan,Erik,Jack,Patrice,Qasim,Vancouver,Toronto,Test,Green,Blue,Red,Purple,Silver,Numer,Integer,Boolean,String,Javascript,Balls</textarea>
 
         </div>
         <div id="content-main">
           <p>
             How many entrants per pool?
           </p>
-          <select>
+          <select id="selNumPool">
             <option value="3" >3</option>
             <option value="4">4</option>
             <option value="5" selected="selected">5</option>
@@ -65,11 +65,12 @@
           </select>
         </div>
         <div id="content-right">
-          <button type="button">Create and download printable PDF!</button>
+          <button type="button" onclick="getOption()">Create and download printable PDF</button>
         </div>
       </div>
       <div id="footer">
       </div>
       <div id="bottom"></div>
   </div>
+  <script src="main.js"></script>
 </body>
