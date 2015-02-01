@@ -10,7 +10,7 @@ function getOption() {
   var RAWentrants = "";
   var entPerPool = 0; //Input taken from select on site
 
-  entPerPool = document.getElementById("selNumPool").value;
+  entPerPool = 5
   RAWentrants = document.getElementById("textraw").value;
 
   var entrants = RAWentrants.split(",");
@@ -38,47 +38,47 @@ function getOption() {
     \\begin{tabular}{|p{3cm}|p{3cm}|p{3cm}|p{3cm}|p{3cm}|p{3cm}|} \n\
       \\hline \n\
       & 0[1,0] & 0[2,0] & 0[3,0] & 0[4,0] & 0[5,0] \\\\\\hline \n\
-      0[0,1] & \\diagbox[width=3.4cm]{}{} &&&& \\\\\\hline \n\
-      0[0,2] && \\diagbox[width=3.4cm]{}{} &&& \\\\\\hline \n\
-      0[0,3] &&& \\diagbox[width=3.4cm]{}{}&& \\\\\\hline \n\
-      0[0,4] &&&& \\diagbox[width=3.4cm]{}{}& \\\\\\hline \n\
-      0[0,5] &&&&& \\diagbox[width=3.4cm]{}{} \\\\\\hline \n\
+      0[0,1] & N/A &&&& \\\\\\hline \n\
+      0[0,2] && N/A &&& \\\\\\hline \n\
+      0[0,3] &&& N/A&& \\\\\\hline \n\
+      0[0,4] &&&& N/A& \\\\\\hline \n\
+      0[0,5] &&&&& N/A \\\\\\hline \n\
     \\end{tabular}\\\\ \n\
     \\begin{tabular}{|p{3cm}|p{3cm}|p{3cm}|p{3cm}|p{3cm}|p{3cm}|} \n\
       \\hline \n\
       & 1[1,0] & 1[2,0] & 1[3,0] & 1[4,0] & 1[5,0] \\\\\\hline \n\
-      1[0,1] & \\diagbox[width=3.4cm]{}{} &&&& \\\\\\hline \n\
-      1[0,2] && \\diagbox[width=3.4cm]{}{} &&& \\\\\\hline \n\
-      1[0,3] &&& \\diagbox[width=3.4cm]{}{}&& \\\\\\hline \n\
-      1[0,4] &&&& \\diagbox[width=3.4cm]{}{}& \\\\\\hline \n\
-      1[0,5] &&&&& \\diagbox[width=3.4cm]{}{} \\\\\\hline \n\
+      1[0,1] & N/A &&&& \\\\\\hline \n\
+      1[0,2] && N/A &&& \\\\\\hline \n\
+      1[0,3] &&& N/A&& \\\\\\hline \n\
+      1[0,4] &&&& N/A& \\\\\\hline \n\
+      1[0,5] &&&&& N/A \\\\\\hline \n\
     \\end{tabular}\\\\ \n\
     \\begin{tabular}{|p{3cm}|p{3cm}|p{3cm}|p{3cm}|p{3cm}|p{3cm}|} \n\
       \\hline \n\
       & 2[1,0] & 2[2,0] & 2[3,0] & 2[4,0] & 2[5,0] \\\\\\hline \n\
-      2[0,1] & \\diagbox[width=3.4cm]{}{} &&&& \\\\\\hline \n\
-      2[0,2] && \\diagbox[width=3.4cm]{}{} &&& \\\\\\hline \n\
-      2[0,3] &&& \\diagbox[width=3.4cm]{}{}&& \\\\\\hline \n\
-      2[0,4] &&&& \\diagbox[width=3.4cm]{}{}& \\\\\\hline \n\
-      2[0,5] &&&&& \\diagbox[width=3.4cm]{}{} \\\\\\hline \n\
+      2[0,1] & N/A &&&& \\\\\\hline \n\
+      2[0,2] && N/A &&& \\\\\\hline \n\
+      2[0,3] &&& N/A&& \\\\\\hline \n\
+      2[0,4] &&&& N/A& \\\\\\hline \n\
+      2[0,5] &&&&& N/A \\\\\\hline \n\
     \\end{tabular}\\\\ \n\
     \\begin{tabular}{|p{3cm}|p{3cm}|p{3cm}|p{3cm}|p{3cm}|p{3cm}|} \n\
       \\hline \n\
       & 3[1,0] & 3[2,0] & 3[3,0] & 3[4,0] & 3[5,0] \\\\\\hline \n\
-      3[0,1] & \\diagbox[width=3.4cm]{}{} &&&& \\\\\\hline \n\
-      3[0,2] && \\diagbox[width=3.4cm]{}{} &&& \\\\\\hline \n\
-      3[0,3] &&& \\diagbox[width=3.4cm]{}{}&& \\\\\\hline \n\
-      3[0,4] &&&& \\diagbox[width=3.4cm]{}{}& \\\\\\hline \n\
-      3[0,5] &&&&& \\diagbox[width=3.4cm]{}{} \\\\\\hline \n\
+      3[0,1] & N/A &&&& \\\\\\hline \n\
+      3[0,2] && N/A &&& \\\\\\hline \n\
+      3[0,3] &&& N/A&& \\\\\\hline \n\
+      3[0,4] &&&& N/A& \\\\\\hline \n\
+      3[0,5] &&&&& N/A \\\\\\hline \n\
     \\end{tabular}\\\\ \n\
     \\begin{tabular}{|p{3cm}|p{3cm}|p{3cm}|p{3cm}|p{3cm}|p{3cm}|} \n\
       \\hline \n\
       & 4[1,0] & 4[2,0] & 4[3,0] & 4[4,0] & 4[5,0] \\\\\\hline \n\
-      4[0,1] & \\diagbox[width=3.4cm]{}{} &&&& \\\\\\hline \n\
-      4[0,2] && \\diagbox[width=3.4cm]{}{} &&& \\\\\\hline \n\
-      4[0,3] &&& \\diagbox[width=3.4cm]{}{}&& \\\\\\hline \n\
-      4[0,4] &&&& \\diagbox[width=3.4cm]{}{}& \\\\\\hline \n\
-      4[0,5] &&&&& \\diagbox[width=3.4cm]{}{} \\\\\\hline \n\
+      4[0,1] & N/A &&&& \\\\\\hline \n\
+      4[0,2] && N/A &&& \\\\\\hline \n\
+      4[0,3] &&& N/A&& \\\\\\hline \n\
+      4[0,4] &&&& N/A& \\\\\\hline \n\
+      4[0,5] &&&&& N/A \\\\\\hline \n\
     \\end{tabular} \n\
     \\egroup \n\
   \\end{document}"
@@ -93,62 +93,62 @@ function getOption() {
     \\begin{tabular}{|p{3cm}|p{3cm}|p{3cm}|p{3cm}|p{3cm}|p{3cm}|p{3cm}|} \n\
       \\hline \n\
       & 0[1,0] & 0[2,0] & 0[3,0] & 0[4,0] & 0[5,0] & 0[6,0] \\\\\\hline \n\
-      0[0,1] & \\diagbox[width=3.4cm]{}{} &&&&& \\\\\\hline \n\
-      0[0,2] && \\diagbox[width=3.4cm]{}{} &&&& \\\\\\hline \n\
-      0[0,3] &&& \\diagbox[width=3.4cm]{}{}&&& \\\\\\hline \n\
-      0[0,4] &&&& \\diagbox[width=3.4cm]{}{}&& \\\\\\hline \n\
-      0[0,5] &&&&& \\diagbox[width=3.4cm]{}{}& \\\\\\hline \n\
-      0[6,0] &&&&&& \\diagbox[width=3.4cm]{}{} \\\\\\hline \n\
+      0[0,1] & N/A &&&&& \\\\\\hline \n\
+      0[0,2] && N/A &&&& \\\\\\hline \n\
+      0[0,3] &&& N/A&&& \\\\\\hline \n\
+      0[0,4] &&&& N/A&& \\\\\\hline \n\
+      0[0,5] &&&&& N/A& \\\\\\hline \n\
+      0[6,0] &&&&&& N/A \\\\\\hline \n\
     \\end{tabular}\\\\ \n\
     \\begin{tabular}{|p{3cm}|p{3cm}|p{3cm}|p{3cm}|p{3cm}|p{3cm}|p{3cm}|} \n\
       \\hline \n\
       & 1[1,0] & 1[2,0] & 1[3,0] & 1[4,0] & 1[5,0] & 1[6,0] \\\\\\hline \n\
-      1[0,1] & \\diagbox[width=3.4cm]{}{} &&&&& \\\\\\hline \n\
-      1[0,2] && \\diagbox[width=3.4cm]{}{} &&&& \\\\\\hline \n\
-      1[0,3] &&& \\diagbox[width=3.4cm]{}{}&&& \\\\\\hline \n\
-      1[0,4] &&&& \\diagbox[width=3.4cm]{}{}&& \\\\\\hline \n\
-      1[0,5] &&&&& \\diagbox[width=3.4cm]{}{}& \\\\\\hline \n\
-      1[6,0] &&&&&& \\diagbox[width=3.4cm]{}{} \\\\\\hline \n\
+      1[0,1] & N/A &&&&& \\\\\\hline \n\
+      1[0,2] && N/A &&&& \\\\\\hline \n\
+      1[0,3] &&& N/A&&& \\\\\\hline \n\
+      1[0,4] &&&& N/A&& \\\\\\hline \n\
+      1[0,5] &&&&& N/A& \\\\\\hline \n\
+      1[6,0] &&&&&& N/A \\\\\\hline \n\
     \\end{tabular}\\\\ \n\
     \\begin{tabular}{|p{3cm}|p{3cm}|p{3cm}|p{3cm}|p{3cm}|p{3cm}|p{3cm}|} \n\
       \\hline \n\
       & 2[1,0] & 2[2,0] & 2[3,0] & 2[4,0] & 2[5,0] & 2[6,0] \\\\\\hline \n\
-      2[0,1] & \\diagbox[width=3.4cm]{}{} &&&&& \\\\\\hline \n\
-      2[0,2] && \\diagbox[width=3.4cm]{}{} &&&& \\\\\\hline \n\
-      2[0,3] &&& \\diagbox[width=3.4cm]{}{}&&&\\\\\\hline \n\
-      2[0,4] &&&& \\diagbox[width=3.4cm]{}{}&& \\\\\\hline \n\
-      2[0,5] &&&&& \\diagbox[width=3.4cm]{}{}& \\\\\\hline \n\
-      2[6,0] &&&&&& \\diagbox[width=3.4cm]{}{} \\\\\\hline \n\
+      2[0,1] & N/A &&&&& \\\\\\hline \n\
+      2[0,2] && N/A &&&& \\\\\\hline \n\
+      2[0,3] &&& N/A&&&\\\\\\hline \n\
+      2[0,4] &&&& N/A&& \\\\\\hline \n\
+      2[0,5] &&&&& N/A& \\\\\\hline \n\
+      2[6,0] &&&&&& N/A \\\\\\hline \n\
     \\end{tabular}\\\\ \n\
     \\begin{tabular}{|p{3cm}|p{3cm}|p{3cm}|p{3cm}|p{3cm}|p{3cm}|p{3cm}|} \n\
       \\hline \n\
       & 3[1,0] & 3[2,0] & 3[3,0] & 3[4,0] & 3[5,0] & 3[6,0] \\\\\\hline \n\
-      3[0,1] & \\diagbox[width=3.4cm]{}{} &&&&& \\\\\\hline \n\
-      3[0,2] && \\diagbox[width=3.4cm]{}{} &&&& \\\\\\hline \n\
-      3[0,3] &&& \\diagbox[width=3.4cm]{}{}&&& \\\\\\hline \n\
-      3[0,4] &&&& \\diagbox[width=3.4cm]{}{}&& \\\\\\hline \n\
-      3[0,5] &&&&& \\diagbox[width=3.4cm]{}{}& \\\\\\hline \n\
-      3[6,0] &&&&&& \\diagbox[width=3.4cm]{}{} \\\\\\hline \n\
+      3[0,1] & N/A &&&&& \\\\\\hline \n\
+      3[0,2] && N/A &&&& \\\\\\hline \n\
+      3[0,3] &&& N/A&&& \\\\\\hline \n\
+      3[0,4] &&&& N/A&& \\\\\\hline \n\
+      3[0,5] &&&&& N/A& \\\\\\hline \n\
+      3[6,0] &&&&&& N/A \\\\\\hline \n\
     \\end{tabular}\\\\ \n\
     \\begin{tabular}{|p{3cm}|p{3cm}|p{3cm}|p{3cm}|p{3cm}|p{3cm}|p{3cm}|} \n\
       \\hline \n\
       & 4[1,0] & 4[2,0] & 4[3,0] & 4[4,0] & 4[5,0] & 4[6,0] \\\\\\hline \n\
-      4[0,1] & \\diagbox[width=3.4cm]{}{} &&&&& \\\\\\hline \n\
-      4[0,2] && \\diagbox[width=3.4cm]{}{} &&&& \\\\\\hline \n\
-      4[0,3] &&& \\diagbox[width=3.4cm]{}{}&&& \\\\\\hline \n\
-      4[0,4] &&&& \\diagbox[width=3.4cm]{}{}&& \\\\\\hline \n\
-      4[0,5] &&&&& \\diagbox[width=3.4cm]{}{}& \\\\\\hline \n\
-      4[6,0] &&&&&& \\diagbox[width=3.4cm]{}{} \\\\\\hline \n\
+      4[0,1] & N/A &&&&& \\\\\\hline \n\
+      4[0,2] && N/A &&&& \\\\\\hline \n\
+      4[0,3] &&& N/A&&& \\\\\\hline \n\
+      4[0,4] &&&& N/A&& \\\\\\hline \n\
+      4[0,5] &&&&& N/A& \\\\\\hline \n\
+      4[6,0] &&&&&& N/A \\\\\\hline \n\
     \\end{tabular}\\\\ \n\
     \\begin{tabular}{|p{3cm}|p{3cm}|p{3cm}|p{3cm}|p{3cm}|p{3cm}|p{3cm}|} \n\
       \\hline \n\
       & 5[1,0] & 5[2,0] & 5[3,0] & 5[4,0] & 5[5,0] & 5[6,0] \\\\\\hline \n\
-      5[0,1] & \\diagbox[width=3.4cm]{}{} &&&&& \\\\\\hline \n\
-      5[0,2] && \\diagbox[width=3.4cm]{}{} &&&& \\\\\\hline \n\
-      5[0,3] &&& \\diagbox[width=3.4cm]{}{}&&& \\\\\\hline \n\
-      5[0,4] &&&& \\diagbox[width=3.4cm]{}{}&& \\\\\\hline \n\
-      5[0,5] &&&&& \\diagbox[width=3.4cm]{}{}& \\\\\\hline \n\
-      5[6,0] &&&&&& \\diagbox[width=3.4cm]{}{} \\\\\\hline \n\
+      5[0,1] & N/A &&&&& \\\\\\hline \n\
+      5[0,2] && N/A &&&& \\\\\\hline \n\
+      5[0,3] &&& N/A&&& \\\\\\hline \n\
+      5[0,4] &&&& N/A&& \\\\\\hline \n\
+      5[0,5] &&&&& N/A& \\\\\\hline \n\
+      5[6,0] &&&&&& N/A \\\\\\hline \n\
     \\end{tabular}\\\\ \n\
     \\egroup \n\
   \\end{document}"
@@ -424,6 +424,7 @@ function getOption() {
               tablexycount++;
               if (putname === 25){
                 console.log(To5);
+                document.getElementById('texout').value = To5
               }
               break;
           }

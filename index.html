@@ -42,18 +42,21 @@
       <div id="content">
         <div id="content-left">
           <p>
-            Enter entrants tags separated by commas (ex/ Ethan,M2K,Mango,Leffen, etc ), listed in order of seed priority
+            Enter exactly 25 entrant tags separated by commas (ex/ Ethan,M2K,Mango,Leffen, etc ), listed in order of seed priority. They will be seeded in pools of exactly 5 entrants. Then take the output text and compile is using a LaTeX compiler. <b>Do not put any spaces between the commas and the tags.</b>
           </p>
-          <textarea id="textraw" rows="10" cols="96">Ethan,Jim,Fred,Steve,Craig,Phil,Adnan,Erik,Jack,Patrice,Qasim,Vancouver,Toronto,Test,Green,Blue,Red,Purple,Silver,Numer,Integer,Boolean,String,Javascript,Balls</textarea>
-
+          <p style="font:11pt;">Enter entrants below.</p>
+          <textarea id="textraw" rows="3" cols="96">Ethan,Jim,Fred,Steve,Craig,Phil,Adnan,Erik,Jack,Patrice,Qasim,Vancouver,Toronto,Test,Green,Blue,Red,Purple,Silver,Numer,Integer,Boolean,String,Javascript,Balls</textarea>
+          <p style="font:11pt;">Compile the output from below.</p>
+          <textarea id="texout" rows="15" cols="96"></textarea>
         </div>
         <div id="content-main">
           <p>
-            How many entrants per pool?
+            5 entrants per pool.
           </p>
-          <select id="selNumPool">
+
+          <!-- <select id="selNumPool">
             <option value="5" selected="selected">5</option>
-          </select>
+          </select> -->
         </div>
         <div id="content-right">
           <button type="button" onclick="getOption()">Create and download printable PDF</button>
