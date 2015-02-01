@@ -42,7 +42,7 @@
       <div id="content">
         <div id="content-left">
           <p>
-            Enter entrant tags separated by commas (ex/ Ethan, M2K, Mango, Leffen, etc), listed in order of seed priority.
+            Enter entrant tags separated by commas (ex/ M2K, Mango, Leffen, Ethan etc), listed in order of seed priority.
           </p>
           <textarea style="font-size:12pt;width:100%;" id="textraw" rows="10""></textarea>
           <h3>How does the seeder place names?</h3>
@@ -53,15 +53,14 @@
         <div id="content-main">
           <p>
             How many entrants per pool?
+            <select id="selNumPool">
+              <option value="5" selected="selected">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+            </select>
           </p>
-
-          <select id="selNumPool">
-            <option value="5" selected="selected">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
-          </select>
         </div>
         <div id="content-right">
           <button class="button" type="button" onclick="makeTex()">Download printable PDF</button>
