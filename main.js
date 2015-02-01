@@ -48,7 +48,7 @@ function createTex5() {
    //Input taken from select on site
   var entPerPool = document.getElementById("selNumPool").value;
   var RAWentrants = document.getElementById("textraw").value;
-  var entrants = RAWentrants.split(",");
+  var entrants = RAWentrants.split(",").map(Function.prototype.call, String.prototype.trim);
   var numPools = Math.ceil(entrants.length / entPerPool);
   var entcount = 0;
   var putname = 0;
@@ -114,7 +114,7 @@ function createTex6(){
   var entPerPool = document.getElementById("selNumPool").value;
   var RAWentrants = document.getElementById("textraw").value;
 
-  var entrants = RAWentrants.split(",");
+  var entrants = RAWentrants.split(",").map(Function.prototype.call, String.prototype.trim);
   var numPools = Math.ceil(entrants.length / entPerPool);
   var entcount = 0;
   var putname = 0;
@@ -181,7 +181,7 @@ function createTex7(){
   var entPerPool = document.getElementById("selNumPool").value;
   var RAWentrants = document.getElementById("textraw").value;
 
-  var entrants = RAWentrants.split(",");
+  var entrants = RAWentrants.split(",").map(Function.prototype.call, String.prototype.trim);
   var numPools = Math.ceil(entrants.length / entPerPool);
   var entcount = 0;
   var putname = 0;
@@ -248,7 +248,7 @@ function createTex8(){
   var entPerPool = document.getElementById("selNumPool").value;
   var RAWentrants = document.getElementById("textraw").value;
 
-  var entrants = RAWentrants.split(",");
+  var entrants = RAWentrants.split(",").map(Function.prototype.call, String.prototype.trim);
   var numPools = Math.ceil(entrants.length / entPerPool);
   var entcount = 0;
   var putname = 0;
@@ -316,7 +316,7 @@ function createTex9(){
   var entPerPool = document.getElementById("selNumPool").value;
   var RAWentrants = document.getElementById("textraw").value;
 
-  var entrants = RAWentrants.split(",");
+  var entrants = RAWentrants.split(",").map(Function.prototype.call, String.prototype.trim);
   var numPools = Math.ceil(entrants.length / entPerPool);
   var entcount = 0;
   var putname = 0;
@@ -338,7 +338,7 @@ function createTex9(){
 
   for (var i = 0;i<numPools;i++){
     mid += replaceAll("xx",i,midx);
-    
+
     tableCount += 1;
   }
   var full = top+mid+bot;
