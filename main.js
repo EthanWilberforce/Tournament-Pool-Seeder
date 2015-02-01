@@ -17,7 +17,6 @@ function makeTex(){
     console.log("Sel7");
     TeX = createTex7();
     console.log(TeX);
-    document.getElementById('textout').value = TeX;
   }
   if (entPerPool == 8){
     TeX = createTex8();
