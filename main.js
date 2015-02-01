@@ -29,7 +29,7 @@ function makeTex(){
 
 //createTex5-9 all build arrays of entrants into different table sizes
 function createTex5() {
-  var midx = "\\begin{tabular}{|p{3cm}|p{3cm}|p{3cm}|p{3cm}|p{3cm}|p{3cm}|} [newline]\
+  var midx = "\\begin{tabular}{|p{3.4cm}|p{3.4cm}|p{3.4cm}|p{3.4cm}|p{3.4cm}|p{3.4cm}|} [newline]\
     \\hline [newline]\
      & xx[1] & xx[2] & xx[3] & xx[4] & xx[5] \\\\\\hline [newline]\
     xx[1] & \\multicolumn{1}{c|}{N/A} &&&& \\\\\\hline [newline]\
@@ -43,7 +43,7 @@ function createTex5() {
   \\begin{document} [newline]\
     \\bgroup [newline]\
      [newline]\
-    \\def\\arraystretch{3} [newline]\ ";
+    \\def\\arraystretch{6} [newline]\ ";
   var bot = "    \\egroup [newline]\
       \\end{document} ";
   var entPerPool = document.getElementById("selNumPool").value;
@@ -79,6 +79,13 @@ function createTex5() {
   //adds the beginning and end to the mid TeX code
   var full = top+mid+bot;
 
+  //hyphenate too long strings
+  for (var i = 0;i<entrants.length;i++){
+    if (entrants[i].length > 12){
+      entrants[i] = entrants[i].substring(0,12) + "-" + entrants[i].substring(12)
+    }
+  }
+
   //replaces components on the graph with names of entrants
   for (var t = 0;t <= entrants.length;t++){
     full = full.replace(tablenum + "[" + (tablexycount+1) + "]", entrants[putname]);
@@ -112,7 +119,7 @@ function createTex6(){
   \\begin{document} [newline]\
     \\bgroup [newline]\
      [newline]\
-    \\def\\arraystretch{3} [newline]\ ";
+    \\def\\arraystretch{5} [newline]\ ";
   var bot = "    \\egroup [newline]\
       \\end{document} ";
    //Input taken from select on site
@@ -145,6 +152,12 @@ function createTex6(){
     tableCount += 1;
   }
   var full = top+mid+bot;
+
+  //hyphenate too long strings
+  for (var i = 0;i<entrants.length;i++){
+    if (entrants[i].length > 10)
+    entrants[i] = entrants[i].substring(0,10) + "-" + entrants[i].substring(10);
+  }
 
   for (var t = 0;t <= entrants.length;t++){
     full = full.replace(tablenum + "[" + (tablexycount+1) + "]", entrants[putname]);
@@ -181,7 +194,7 @@ function createTex7(){
   \\begin{document} [newline]\
     \\bgroup [newline]\
      [newline]\
-    \\def\\arraystretch{3} [newline]\ ";
+    \\def\\arraystretch{4} [newline]\ ";
   var bot = "    \\egroup [newline]\
       \\end{document} ";
    //Input taken from select on site
@@ -214,6 +227,12 @@ function createTex7(){
     tableCount += 1;
   }
   var full = top+mid+bot;
+
+  //hyphenate too long strings
+  for (var i = 0;i<entrants.length;i++){
+    if (entrants[i].length > 9)
+    entrants[i] = entrants[i].substring(0,9) + "-" + entrants[i].substring(9)
+  }
 
   for (var t = 0;t <= entrants.length;t++){
     full = full.replace(tablenum + "[" + (tablexycount+1) + "]", entrants[putname]);
@@ -245,12 +264,12 @@ function createTex8(){
       xx[7] &&&&&&& \\multicolumn{1}{c|}{N/A}& \\\\\\hline [newline]\
       xx[8] &&&&&&&& \\multicolumn{1}{c|}{N/A} \\\\\\hline [newline]\
     \\end{tabular}\\\\\\newpage[newline]\ "
-    var top = "\\documentclass[40pt]{article} [newline]\
+  var top = "\\documentclass[40pt]{article} [newline]\
     \\usepackage[landscape, margin=1cm]{geometry} [newline]\
     \\begin{document} [newline]\
       \\bgroup [newline]\
        [newline]\
-    \\def\\arraystretch{2.6} [newline]\ ";
+    \\def\\arraystretch{5} [newline]\ ";
   var bot = "    \\egroup [newline]\
       \\end{document} ";
    //Input taken from select on site
@@ -283,6 +302,12 @@ function createTex8(){
     tableCount += 1;
   }
   var full = top+mid+bot;
+
+  //hyphenate too long strings
+  for (var i = 0;i<entrants.length;i++){
+    if (entrants[i].length > 8)
+    entrants[i] = entrants[i].substring(0,8) + "-" + entrants[i].substring(8)
+  }
 
   for (var t = 0;t <= entrants.length;t++){
     full = full.replace(tablenum + "[" + (tablexycount+1) + "]", entrants[putname]);
@@ -318,7 +343,7 @@ function createTex9(){
   \\begin{document} [newline]\
     \\bgroup [newline]\
      [newline]\
-    \\def\\arraystretch{2.3} [newline]\ ";
+    \\def\\arraystretch{4} [newline]\ ";
   var bot = "    \\egroup [newline]\
       \\end{document} ";
    //Input taken from select on site
@@ -351,6 +376,12 @@ function createTex9(){
     tableCount += 1;
   }
   var full = top+mid+bot;
+
+  //hyphenate too long strings
+  for (var i = 0;i<entrants.length;i++){
+    if (entrants[i].length > 6)
+    entrants[i] = entrants[i].substring(0,6) + "-" + entrants[i].substring(6);
+  }
 
   for (var t = 0;t <= entrants.length;t++){
     full = full.replace(tablenum + "[" + (tablexycount+1) + "]", entrants[putname]);
