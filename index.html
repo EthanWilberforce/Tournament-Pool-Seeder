@@ -45,7 +45,7 @@
             Enter exactly 25 entrant tags separated by commas (ex/ Ethan,M2K,Mango,Leffen, etc ), listed in order of seed priority. They will be seeded in pools of exactly 5 entrants. Then take the output text and compile is using a LaTeX compiler. <b>Do not put any spaces between the commas and the tags.</b>
           </p>
           <p style="font:11pt;">Enter entrants below.</p>
-          <textarea id="textraw" rows="3" cols="96">Ethan,Jim,Fred,Steve,Craig,Phil,Adnan,Erik,Jack,Patrice,Qasim,Vancouver,Toronto,Test,Green,Blue,Red,Purple,Silver,Numer,Integer,Boolean,String,Javascript,Balls</textarea>
+          <textarea id="textraw" rows="3" cols="96">Ethan,Jim,Fred,Steve,Craig</textarea>
           <p style="font:11pt;">Compile the output from below.</p>
           <textarea id="texout" rows="15" cols="96"></textarea>
         </div>
@@ -54,12 +54,16 @@
             5 entrants per pool.
           </p>
 
-          <!-- <select id="selNumPool">
+          <select id="selNumPool">
             <option value="5" selected="selected">5</option>
-          </select> -->
+            <option value="6">6</option>
+            <option value="6">7</option>
+            <option value="6">8</option>
+            <option value="6">9</option>
+          </select>
         </div>
         <div id="content-right">
-          <button type="button" onclick="getOption()">Create and download printable PDF</button>
+          <button type="button" onclick="makeTex()">Create and download printable PDF</button>
         </div>
       </div>
       <div id="footer">
