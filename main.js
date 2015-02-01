@@ -1,32 +1,29 @@
+//Provides the ability to replace all of x in a string with y
 function replaceAll(find, replace, str){
   return str.replace(new RegExp(find, 'g'), replace);
 }
 
+//controlled by the dropdown menu, chooses which graph type is needed
 function makeTex(){
   var entPerPool = document.getElementById("selNumPool").value;
-
   if(entPerPool == 5){
-    console.log("selected5");
     createTex5();
   }
   if (entPerPool == 6){
-    console.log("selected6");
     createTex6();
   }
   if (entPerPool == 7){
-    console.log("selected7");
     createTex7();
   }
   if (entPerPool == 8){
-    console.log("selected8");
     createTex8();
   }
   if (entPerPool == 9){
-    console.log("selected9");
     createTex9();
   }
 }
 
+//createTex5-9 all build arrays of entrants into different table sizes
 function createTex5() {
   var midx = "    \\begin{tabular}{|p{3cm}|p{3cm}|p{3cm}|p{3cm}|p{3cm}|p{3cm}|} \n\
     \\hline \n\
@@ -45,7 +42,6 @@ function createTex5() {
     \\def\\arraystretch{3} \n\ ";
   var bot = "    \\egroup \n\
       \\end{document} ";
-   //Input taken from select on site
   var entPerPool = document.getElementById("selNumPool").value;
   var RAWentrants = document.getElementById("textraw").value;
   var entrants = RAWentrants.split(",").map(Function.prototype.call, String.prototype.trim);
@@ -57,6 +53,8 @@ function createTex5() {
   var tableCount = 0;
   var tablexycount = 0;
   var entsRemain = 0;
+
+  //allows arrays of entrants that aren't multiple of the amount of pools in length
   if (entrants.length % entPerPool !== 0){
     var entsRemain = (entPerPool - (entrants.length % entPerPool))
     var entcount = entrants.length + 1
@@ -67,14 +65,17 @@ function createTex5() {
   }
 
   var mid ="";
-
+  //builds the TeX code for x amount of tables
   for (var i = 0;i<numPools;i++){
     mid += replaceAll("xx",i,midx);
 
     tableCount += 1;
   }
+
+  //adds the beginning and end to the mid TeX code
   var full = top+mid+bot;
 
+  //replaces components on the graph with names of entrants
   for (var t = 0;t <= entrants.length*2;t++){
     full = full.replace(tablenum + "[" + (tablexycount+1) + "]", entrants[putname]);
     full = full.replace(tablenum + "[" + (tablexycount+1) + "]", entrants[putname]);
