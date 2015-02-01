@@ -40,7 +40,7 @@ function createTex5() {
   \\usepackage[landscape, margin=1cm]{geometry} [newline]\
   \\begin{document} [newline]\
     \\bgroup [newline]\
-    \\LARGE [newline]\
+     [newline]\
     \\def\\arraystretch{3} [newline]\ ";
   var bot = "    \\egroup [newline]\
       \\end{document} ";
@@ -109,7 +109,7 @@ function createTex6(){
   \\usepackage[landscape, margin=1cm]{geometry} [newline]\
   \\begin{document} [newline]\
     \\bgroup [newline]\
-    \\LARGE [newline]\
+     [newline]\
     \\def\\arraystretch{3} [newline]\ ";
   var bot = "    \\egroup [newline]\
       \\end{document} ";
@@ -176,7 +176,7 @@ function createTex7(){
   \\usepackage[landscape, margin=1cm]{geometry} [newline]\
   \\begin{document} [newline]\
     \\bgroup [newline]\
-    \\LARGE [newline]\
+     [newline]\
     \\def\\arraystretch{3} [newline]\ ";
   var bot = "    \\egroup [newline]\
       \\end{document} ";
@@ -244,7 +244,7 @@ function createTex8(){
   var top = "\\documentclass[40pt]{article} [newline]\
   \\usepackage[landscape, margin=1cm]{geometry} [newline]\
     \\bgroup [newline]\
-    \\LARGE [newline]\
+     [newline]\
     \\def\\arraystretch{2.6} [newline]\ ";
   var bot = "    \\egroup [newline]\
       \\end{document} ";
@@ -312,7 +312,7 @@ function createTex9(){
   \\usepackage[landscape, margin=1cm]{geometry} [newline]\
   \\begin{document} [newline]\
     \\bgroup [newline]\
-    \\LARGE [newline]\
+     [newline]\
     \\def\\arraystretch{2.3} [newline]\ ";
   var bot = "    \\egroup [newline]\
       \\end{document} ";
