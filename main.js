@@ -81,8 +81,17 @@ function createTex5() {
 
   //hyphenate too long strings
   for (var i = 0;i<entrants.length;i++){
-    if (entrants[i].length > 12){
-      entrants[i] = entrants[i].substring(0,12) + "-" + entrants[i].substring(12)
+    if (entrants[i].length > 12 & entrants[i].length <= 25) {
+      entrants[i] = entrants[i].substring(0,12) + "-" + entrants[i].substring(12,25);
+    }
+    if (entrants[i].length >25 & entrants[i].length <=38) {
+      entrants[i] = entrants[i].substring(0,12) + "-" + entrants[i].substring(12,25) + "-" + entrants[i].substring(38);
+    }
+    if (entrants[i].length >38 & entrants[i].length <= 51) {
+      entrants[i] = entrants[i].substring(0,12) + "-" + entrants[i].substring(12,25) + "-" + entrants[i].substring(38,51) + "-" + entrants[i].substring(51);
+    }
+    if (entrants[i].length >51) {
+      entrants[i] = entrants[i].substring(0,12) + "-" + entrants[i].substring(12,25) + "-" + entrants[i].substring(38,51) + "-" + entrants[i].substring(51,64) + "-" + entrants[i].substring(64);
     }
   }
 
@@ -153,10 +162,21 @@ function createTex6(){
   }
   var full = top+mid+bot;
 
+
   //hyphenate too long strings
   for (var i = 0;i<entrants.length;i++){
-    if (entrants[i].length > 10)
-    entrants[i] = entrants[i].substring(0,10) + "-" + entrants[i].substring(10);
+    if (entrants[i].length > 10 & entrants[i].length <= 21) {
+      entrants[i] = entrants[i].substring(0,10) + "-" + entrants[i].substring(10,21);
+    }
+    if (entrants[i].length >21 & entrants[i].length <=32) {
+      entrants[i] = entrants[i].substring(0,10) + "-" + entrants[i].substring(10,21) + "-" + entrants[i].substring(21);
+    }
+    if (entrants[i].length >32 & entrants[i].length <= 43) {
+      entrants[i] = entrants[i].substring(0,10) + "-" + entrants[i].substring(10,21) + "-" + entrants[i].substring(21,32) + "-" + entrants[i].substring(32);
+    }
+    if (entrants[i].length >43) {
+      entrants[i] = entrants[i].substring(0,10) + "-" + entrants[i].substring(10,21) + "-" + entrants[i].substring(21,32) + "-" + entrants[i].substring(32,43) + "-" + entrants[i].substring(43);
+    }
   }
 
   for (var t = 0;t <= entrants.length;t++){
@@ -230,9 +250,20 @@ function createTex7(){
 
   //hyphenate too long strings
   for (var i = 0;i<entrants.length;i++){
-    if (entrants[i].length > 9)
-    entrants[i] = entrants[i].substring(0,9) + "-" + entrants[i].substring(9)
+    if (entrants[i].length > 9 & entrants[i].length <= 19) {
+      entrants[i] = entrants[i].substring(0,9) + "-" + entrants[i].substring(9,19);
+    }
+    if (entrants[i].length >19 & entrants[i].length <=29) {
+      entrants[i] = entrants[i].substring(0,9) + "-" + entrants[i].substring(9,19) + "-" + entrants[i].substring(19);
+    }
+    if (entrants[i].length >29 & entrants[i].length <= 39) {
+      entrants[i] = entrants[i].substring(0,9) + "-" + entrants[i].substring(9,19) + "-" + entrants[i].substring(19,29) + "-" + entrants[i].substring(29);
+    }
+    if (entrants[i].length >39) {
+      entrants[i] = entrants[i].substring(0,9) + "-" + entrants[i].substring(9,19) + "-" + entrants[i].substring(19,29) + "-" + entrants[i].substring(29,39) + "-" + entrants[i].substring(39);
+    }
   }
+
 
   for (var t = 0;t <= entrants.length;t++){
     full = full.replace(tablenum + "[" + (tablexycount+1) + "]", entrants[putname]);
@@ -269,7 +300,7 @@ function createTex8(){
     \\begin{document} [newline]\
       \\bgroup [newline]\
        [newline]\
-    \\def\\arraystretch{5} [newline]\ ";
+    \\def\\arraystretch{3} [newline]\ ";
   var bot = "    \\egroup [newline]\
       \\end{document} ";
    //Input taken from select on site
@@ -305,8 +336,18 @@ function createTex8(){
 
   //hyphenate too long strings
   for (var i = 0;i<entrants.length;i++){
-    if (entrants[i].length > 8)
-    entrants[i] = entrants[i].substring(0,8) + "-" + entrants[i].substring(8)
+    if (entrants[i].length > 8 & entrants[i].length <= 16) {
+      entrants[i] = entrants[i].substring(0,9) + "-" + entrants[i].substring(9);
+    }
+    if (entrants[i].length >16 & entrants[i].length <=24) {
+      entrants[i] = entrants[i].substring(0,9) + "-" + entrants[i].substring(9,18) + "-" + entrants[i].substring(18);
+    }
+    if (entrants[i].length >24 & entrants[i].length <= 32) {
+      entrants[i] = entrants[i].substring(0,9) + "-" + entrants[i].substring(9,18) + "-" + entrants[i].substring(18,26) + "-" + entrants[i].substring(26);
+    }
+    if (entrants[i].length >32) {
+      entrants[i] = entrants[i].substring(0,9) + "-" + entrants[i].substring(9,18) + "-" + entrants[i].substring(18,26) + "-" + entrants[i].substring(26,34) + "-" + entrants[i].substring(34);
+    }
   }
 
   for (var t = 0;t <= entrants.length;t++){
@@ -343,7 +384,7 @@ function createTex9(){
   \\begin{document} [newline]\
     \\bgroup [newline]\
      [newline]\
-    \\def\\arraystretch{4} [newline]\ ";
+    \\def\\arraystretch{3} [newline]\ ";
   var bot = "    \\egroup [newline]\
       \\end{document} ";
    //Input taken from select on site
@@ -379,8 +420,18 @@ function createTex9(){
 
   //hyphenate too long strings
   for (var i = 0;i<entrants.length;i++){
-    if (entrants[i].length > 6)
-    entrants[i] = entrants[i].substring(0,6) + "-" + entrants[i].substring(6);
+    if (entrants[i].length > 6 & entrants[i].length <= 12) {
+      entrants[i] = entrants[i].substring(0,7) + "-" + entrants[i].substring(7);
+    }
+    if (entrants[i].length >12 & entrants[i].length <=20) {
+      entrants[i] = entrants[i].substring(0,7) + "-" + entrants[i].substring(7,14) + "-" + entrants[i].substring(14);
+    }
+    if (entrants[i].length >20 & entrants[i].length <= 27) {
+      entrants[i] = entrants[i].substring(0,7) + "-" + entrants[i].substring(7,14) + "-" + entrants[i].substring(14,22) + "-" + entrants[i].substring(22);
+    }
+    if (entrants[i].length >27) {
+      entrants[i] = entrants[i].substring(0,7) + "-" + entrants[i].substring(7,14) + "-" + entrants[i].substring(14,22) + "-" + entrants[i].substring(22,30) + "-" + entrants[i].substring(30);
+    }
   }
 
   for (var t = 0;t <= entrants.length;t++){
