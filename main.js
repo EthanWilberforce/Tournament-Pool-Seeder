@@ -14,7 +14,10 @@ function makeTex(){
     TeX = createTex6();
   }
   if (entPerPool == 7){
+    console.log("Sel7");
     TeX = createTex7();
+    console.log(TeX);
+    document.getElementById('textout').value = TeX;
   }
   if (entPerPool == 8){
     TeX = createTex8();
@@ -35,7 +38,7 @@ function createTex5() {
     xx[3] &&& \\multicolumn{1}{c|}{N/A} && \\\\\\hline [newline]\
     xx[4] &&&& \\multicolumn{1}{c|}{N/A} & \\\\\\hline [newline]\
     xx[5] &&&&& \\multicolumn{1}{c|}{N/A} \\\\\\hline [newline]\
-  \\end{tabular}\\\\ [newline]\ "
+  \\end{tabular}\\\\\\newpage[newline]\ "
   var top = "\\documentclass[40pt]{article} [newline]\
   \\usepackage[landscape, margin=1cm]{geometry} [newline]\
   \\begin{document} [newline]\
@@ -78,7 +81,7 @@ function createTex5() {
   var full = top+mid+bot;
 
   //replaces components on the graph with names of entrants
-  for (var t = 0;t <= entrants.length*2;t++){
+  for (var t = 0;t <= entrants.length;t++){
     full = full.replace(tablenum + "[" + (tablexycount+1) + "]", entrants[putname]);
     full = full.replace(tablenum + "[" + (tablexycount+1) + "]", entrants[putname]);
     tablenum++;
@@ -87,7 +90,7 @@ function createTex5() {
       tablenum = 0;
       tablexycount++;
     }
-    if (putname === entrants.length*2){
+    if (putname === entrants.length){
       console.log(full);
       return full;
     }
@@ -104,7 +107,7 @@ function createTex6(){
       xx[4] &&&& \\multicolumn{1}{c|}{N/A}&& \\\\\\hline [newline]\
       xx[5] &&&&& \\multicolumn{1}{c|}{N/A}& \\\\\\hline [newline]\
       xx[6] &&&&&& \\multicolumn{1}{c|}{N/A} \\\\\\hline [newline]\
-    \\end{tabular}\\\\ [newline]\ "
+    \\end{tabular}\\\\\\newpage [newline] "
   var top = "\\documentclass[40pt]{article} [newline]\
   \\usepackage[landscape, margin=1cm]{geometry} [newline]\
   \\begin{document} [newline]\
@@ -144,7 +147,7 @@ function createTex6(){
   }
   var full = top+mid+bot;
 
-  for (var t = 0;t <= entrants.length*2;t++){
+  for (var t = 0;t <= entrants.length;t++){
     full = full.replace(tablenum + "[" + (tablexycount+1) + "]", entrants[putname]);
     full = full.replace(tablenum + "[" + (tablexycount+1) + "]", entrants[putname]);
     tablenum++;
@@ -153,12 +156,14 @@ function createTex6(){
       tablenum = 0;
       tablexycount++;
     }
-    if (putname === entrants.length*2){
+    if (putname === entrants.length){
       console.log(full);
       return full;
     }
   }
 }
+
+
 
 function createTex7(){
   var midx ="\\begin{tabular}{|p{2.6cm}|p{2.6cm}|p{2.6cm}|p{2.6cm}|p{2.6cm}|p{2.6cm}|p{2.6cm}|p{2.6cm}|} [newline]\
@@ -171,7 +176,7 @@ function createTex7(){
     xx[5] &&&&& \\multicolumn{1}{c|}{N/A}&& \\\\\\hline [newline]\
     xx[6] &&&&&& \\multicolumn{1}{c|}{N/A}& \\\\\\hline [newline]\
     xx[7] &&&&&&& \\multicolumn{1}{c|}{N/A} \\\\\\hline [newline]\
-  \\end{tabular}\\\\ [newline]\ "
+  \\end{tabular}\\\\\\newpage[newline]\ "
   var top = "\\documentclass[40pt]{article} [newline]\
   \\usepackage[landscape, margin=1cm]{geometry} [newline]\
   \\begin{document} [newline]\
@@ -199,7 +204,6 @@ function createTex7(){
     while (entsRemain > 0){
       entrants.push("");
       entsRemain--;
-      return full;
     }
   }
 
@@ -212,7 +216,7 @@ function createTex7(){
   }
   var full = top+mid+bot;
 
-  for (var t = 0;t <= entrants.length*2;t++){
+  for (var t = 0;t <= entrants.length;t++){
     full = full.replace(tablenum + "[" + (tablexycount+1) + "]", entrants[putname]);
     full = full.replace(tablenum + "[" + (tablexycount+1) + "]", entrants[putname]);
     tablenum++;
@@ -221,12 +225,13 @@ function createTex7(){
       tablenum = 0;
       tablexycount++;
     }
-    if (putname === entrants.length*2){
+    if (putname === entrants.length){
       console.log(full);
       return full;
     }
   }
 }
+
 
 function createTex8(){
   var midx = "\\begin{tabular}{|p{2.3cm}|p{2.3cm}|p{2.3cm}|p{2.3cm}|p{2.3cm}|p{2.3cm}|p{2.3cm}|p{2.3cm}|p{2.3cm}|} [newline]\
@@ -240,11 +245,12 @@ function createTex8(){
       xx[6] &&&&&& \\multicolumn{1}{c|}{N/A}&& \\\\\\hline [newline]\
       xx[7] &&&&&&& \\multicolumn{1}{c|}{N/A}& \\\\\\hline [newline]\
       xx[8] &&&&&&&& \\multicolumn{1}{c|}{N/A} \\\\\\hline [newline]\
-    \\end{tabular}\\\\ [newline]\ "
-  var top = "\\documentclass[40pt]{article} [newline]\
-  \\usepackage[landscape, margin=1cm]{geometry} [newline]\
-    \\bgroup [newline]\
-     [newline]\
+    \\end{tabular}\\\\\\newpage[newline]\ "
+    var top = "\\documentclass[40pt]{article} [newline]\
+    \\usepackage[landscape, margin=1cm]{geometry} [newline]\
+    \\begin{document} [newline]\
+      \\bgroup [newline]\
+       [newline]\
     \\def\\arraystretch{2.6} [newline]\ ";
   var bot = "    \\egroup [newline]\
       \\end{document} ";
@@ -279,7 +285,7 @@ function createTex8(){
   }
   var full = top+mid+bot;
 
-  for (var t = 0;t <= entrants.length*2;t++){
+  for (var t = 0;t <= entrants.length;t++){
     full = full.replace(tablenum + "[" + (tablexycount+1) + "]", entrants[putname]);
     full = full.replace(tablenum + "[" + (tablexycount+1) + "]", entrants[putname]);
     tablenum++;
@@ -288,7 +294,7 @@ function createTex8(){
       tablenum = 0;
       tablexycount++;
     }
-    if (putname === entrants.length*2){
+    if (putname === entrants.length){
       console.log(full);
       return full;
     }
@@ -307,7 +313,7 @@ function createTex9(){
 		xx[7] &&&&&&& \\multicolumn{1}{c|}{N/A}&& \\\\\\hline [newline]\
 		xx[8] &&&&&&&& \\multicolumn{1}{c|}{N/A}& \\\\\\hline [newline]\
 		xx[9] &&&&&&&&& \\multicolumn{1}{c|}{N/A}  \\\\\\hline [newline]\
-	\\end{tabular}\\\\ [newline]\ ";
+	\\end{tabular}\\\\\\newpage[newline]\ ";
   var top = "\\documentclass[40pt]{article} [newline]\
   \\usepackage[landscape, margin=1cm]{geometry} [newline]\
   \\begin{document} [newline]\
@@ -347,7 +353,7 @@ function createTex9(){
   }
   var full = top+mid+bot;
 
-  for (var t = 0;t <= entrants.length*2;t++){
+  for (var t = 0;t <= entrants.length;t++){
     full = full.replace(tablenum + "[" + (tablexycount+1) + "]", entrants[putname]);
     full = full.replace(tablenum + "[" + (tablexycount+1) + "]", entrants[putname]);
     tablenum++;
@@ -356,7 +362,7 @@ function createTex9(){
       tablenum = 0;
       tablexycount++;
     }
-    if (putname === entrants.length*2){
+    if (putname === entrants.length){
       console.log(full);
       return full;
 
