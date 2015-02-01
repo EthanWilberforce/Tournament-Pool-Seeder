@@ -88,7 +88,6 @@ function createTex5() {
       tablexycount++;
     }
     if (putname === entrants.length*2){
-      document.getElementById("texout").value = full;
       console.log(full);
       return full;
     }
@@ -155,7 +154,6 @@ function createTex6(){
       tablexycount++;
     }
     if (putname === entrants.length*2){
-      document.getElementById("texout").value = full;
       console.log(full);
       return full;
     }
@@ -224,7 +222,6 @@ function createTex7(){
       tablexycount++;
     }
     if (putname === entrants.length*2){
-      document.getElementById("texout").value = full;
       console.log(full);
       return full;
     }
@@ -292,7 +289,6 @@ function createTex8(){
       tablexycount++;
     }
     if (putname === entrants.length*2){
-      document.getElementById("texout").value = full;
       console.log(full);
       return full;
     }
@@ -361,7 +357,6 @@ function createTex9(){
       tablexycount++;
     }
     if (putname === entrants.length*2){
-      document.getElementById("texout").value = full;
       console.log(full);
       return full;
 
