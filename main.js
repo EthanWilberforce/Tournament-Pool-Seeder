@@ -6,41 +6,43 @@ function replaceAll(find, replace, str){
 //controlled by the dropdown menu, chooses which graph type is needed
 function makeTex(){
   var entPerPool = document.getElementById("selNumPool").value;
+  var TeX = "";
   if(entPerPool == 5){
-    createTex5();
+    TeX = createTex5();
   }
   if (entPerPool == 6){
-    createTex6();
+    TeX = createTex6();
   }
   if (entPerPool == 7){
-    createTex7();
+    TeX = createTex7();
   }
   if (entPerPool == 8){
-    createTex8();
+    TeX = createTex8();
   }
   if (entPerPool == 9){
-    createTex9();
+    TeX = createTex9();
   }
+  location.href= "http://qas.im/projects/ethan/tex2pdf.php?tex=" + encodeURIComponent(TeX);
 }
 
 //createTex5-9 all build arrays of entrants into different table sizes
 function createTex5() {
-  var midx = "    \\begin{tabular}{|p{3cm}|p{3cm}|p{3cm}|p{3cm}|p{3cm}|p{3cm}|} \n\
-    \\hline \n\
-     & xx[1] & xx[2] & xx[3] & xx[4] & xx[5] \\\\\\hline \n\
-    xx[1] & \\multicolumn{1}{c|}{N/A} &&&& \\\\\\hline \n\
-    xx[2] && \\multicolumn{1}{c|}{N/A} &&& \\\\\\hline \n\
-    xx[3] &&& \\multicolumn{1}{c|}{N/A} && \\\\\\hline \n\
-    xx[4] &&&& \\multicolumn{1}{c|}{N/A} & \\\\\\hline \n\
-    xx[5] &&&&& \\multicolumn{1}{c|}{N/A} \\\\\\hline \n\
-  \\end{tabular}\\\\ \n\ "
-  var top = "\\documentclass[40pt]{article} \n\
-  \\usepackage[landscape, margin=1cm]{geometry} \n\
-  \\begin{document} \n\
-    \\bgroup \n\
-    \\LARGE \n\
-    \\def\\arraystretch{3} \n\ ";
-  var bot = "    \\egroup \n\
+  var midx = "\\begin{tabular}{|p{3cm}|p{3cm}|p{3cm}|p{3cm}|p{3cm}|p{3cm}|} [newline]\
+    \\hline [newline]\
+     & xx[1] & xx[2] & xx[3] & xx[4] & xx[5] \\\\\\hline [newline]\
+    xx[1] & \\multicolumn{1}{c|}{N/A} &&&& \\\\\\hline [newline]\
+    xx[2] && \\multicolumn{1}{c|}{N/A} &&& \\\\\\hline [newline]\
+    xx[3] &&& \\multicolumn{1}{c|}{N/A} && \\\\\\hline [newline]\
+    xx[4] &&&& \\multicolumn{1}{c|}{N/A} & \\\\\\hline [newline]\
+    xx[5] &&&&& \\multicolumn{1}{c|}{N/A} \\\\\\hline [newline]\
+  \\end{tabular}\\\\ [newline]\ "
+  var top = "\\documentclass[40pt]{article} [newline]\
+  \\usepackage[landscape, margin=1cm]{geometry} [newline]\
+  \\begin{document} [newline]\
+    \\bgroup [newline]\
+    \\LARGE [newline]\
+    \\def\\arraystretch{3} [newline]\ ";
+  var bot = "    \\egroup [newline]\
       \\end{document} ";
   var entPerPool = document.getElementById("selNumPool").value;
   var RAWentrants = document.getElementById("textraw").value;
@@ -88,28 +90,29 @@ function createTex5() {
     if (putname === entrants.length*2){
       document.getElementById("texout").value = full;
       console.log(full);
+      return full;
     }
   }
 }
 
 function createTex6(){
-  var midx = "  \\begin{tabular}{|p{3cm}|p{3cm}|p{3cm}|p{3cm}|p{3cm}|p{3cm}|p{3cm}|} \n\
-      \\hline \n\
-       & xx[1] & xx[2] & xx[3] & xx[4] & xx[5] & xx[6] \\\\\\hline \n\
-      xx[1] & \\multicolumn{1}{c|}{N/A} &&&&& \\\\\\hline \n\
-      xx[2] && \\multicolumn{1}{c|}{N/A} &&&& \\\\\\hline \n\
-      xx[3] &&& \\multicolumn{1}{c|}{N/A}&&& \\\\\\hline \n\
-      xx[4] &&&& \\multicolumn{1}{c|}{N/A}&& \\\\\\hline \n\
-      xx[5] &&&&& \\multicolumn{1}{c|}{N/A}& \\\\\\hline \n\
-      xx[6] &&&&&& \\multicolumn{1}{c|}{N/A} \\\\\\hline \n\
-    \\end{tabular}\\\\ \n\ "
-  var top = "\\documentclass[40pt]{article} \n\
-  \\usepackage[landscape, margin=1cm]{geometry} \n\
-  \\begin{document} \n\
-    \\bgroup \n\
-    \\LARGE \n\
-    \\def\\arraystretch{3} \n\ ";
-  var bot = "    \\egroup \n\
+  var midx = "\\begin{tabular}{|p{3cm}|p{3cm}|p{3cm}|p{3cm}|p{3cm}|p{3cm}|p{3cm}|} [newline]\
+      \\hline [newline]\
+       & xx[1] & xx[2] & xx[3] & xx[4] & xx[5] & xx[6] \\\\\\hline [newline]\
+      xx[1] & \\multicolumn{1}{c|}{N/A} &&&&& \\\\\\hline [newline]\
+      xx[2] && \\multicolumn{1}{c|}{N/A} &&&& \\\\\\hline [newline]\
+      xx[3] &&& \\multicolumn{1}{c|}{N/A}&&& \\\\\\hline [newline]\
+      xx[4] &&&& \\multicolumn{1}{c|}{N/A}&& \\\\\\hline [newline]\
+      xx[5] &&&&& \\multicolumn{1}{c|}{N/A}& \\\\\\hline [newline]\
+      xx[6] &&&&&& \\multicolumn{1}{c|}{N/A} \\\\\\hline [newline]\
+    \\end{tabular}\\\\ [newline]\ "
+  var top = "\\documentclass[40pt]{article} [newline]\
+  \\usepackage[landscape, margin=1cm]{geometry} [newline]\
+  \\begin{document} [newline]\
+    \\bgroup [newline]\
+    \\LARGE [newline]\
+    \\def\\arraystretch{3} [newline]\ ";
+  var bot = "    \\egroup [newline]\
       \\end{document} ";
    //Input taken from select on site
   var entPerPool = document.getElementById("selNumPool").value;
@@ -154,29 +157,30 @@ function createTex6(){
     if (putname === entrants.length*2){
       document.getElementById("texout").value = full;
       console.log(full);
+      return full;
     }
   }
 }
 
 function createTex7(){
-  var midx ="\\begin{tabular}{|p{2.6cm}|p{2.6cm}|p{2.6cm}|p{2.6cm}|p{2.6cm}|p{2.6cm}|p{2.6cm}|p{2.6cm}|} \n\
-    \\hline \n\
-     & xx[1] & xx[2] & xx[3] & xx[4] & xx[5] & xx[6] & xx[7] \\\\\\hline \n\
-    xx[1] & \\multicolumn{1}{c|}{N/A} &&&&&& \\\\\\hline \n\
-    xx[2] && \\multicolumn{1}{c|}{N/A} &&&&& \\\\\\hline \n\
-    xx[3] &&& \\multicolumn{1}{c|}{N/A}&&&& \\\\\\hline \n\
-    xx[4] &&&& \\multicolumn{1}{c|}{N/A}&&& \\\\\\hline \n\
-    xx[5] &&&&& \\multicolumn{1}{c|}{N/A}&& \\\\\\hline \n\
-    xx[6] &&&&&& \\multicolumn{1}{c|}{N/A}& \\\\\\hline \n\
-    xx[7] &&&&&&& \\multicolumn{1}{c|}{N/A} \\\\\\hline \n\
-  \\end{tabular}\\\\ \n\ "
-  var top = "\\documentclass[40pt]{article} \n\
-  \\usepackage[landscape, margin=1cm]{geometry} \n\
-  \\begin{document} \n\
-    \\bgroup \n\
-    \\LARGE \n\
-    \\def\\arraystretch{3} \n\ ";
-  var bot = "    \\egroup \n\
+  var midx ="\\begin{tabular}{|p{2.6cm}|p{2.6cm}|p{2.6cm}|p{2.6cm}|p{2.6cm}|p{2.6cm}|p{2.6cm}|p{2.6cm}|} [newline]\
+    \\hline [newline]\
+     & xx[1] & xx[2] & xx[3] & xx[4] & xx[5] & xx[6] & xx[7] \\\\\\hline [newline]\
+    xx[1] & \\multicolumn{1}{c|}{N/A} &&&&&& \\\\\\hline [newline]\
+    xx[2] && \\multicolumn{1}{c|}{N/A} &&&&& \\\\\\hline [newline]\
+    xx[3] &&& \\multicolumn{1}{c|}{N/A}&&&& \\\\\\hline [newline]\
+    xx[4] &&&& \\multicolumn{1}{c|}{N/A}&&& \\\\\\hline [newline]\
+    xx[5] &&&&& \\multicolumn{1}{c|}{N/A}&& \\\\\\hline [newline]\
+    xx[6] &&&&&& \\multicolumn{1}{c|}{N/A}& \\\\\\hline [newline]\
+    xx[7] &&&&&&& \\multicolumn{1}{c|}{N/A} \\\\\\hline [newline]\
+  \\end{tabular}\\\\ [newline]\ "
+  var top = "\\documentclass[40pt]{article} [newline]\
+  \\usepackage[landscape, margin=1cm]{geometry} [newline]\
+  \\begin{document} [newline]\
+    \\bgroup [newline]\
+    \\LARGE [newline]\
+    \\def\\arraystretch{3} [newline]\ ";
+  var bot = "    \\egroup [newline]\
       \\end{document} ";
    //Input taken from select on site
   var entPerPool = document.getElementById("selNumPool").value;
@@ -197,6 +201,7 @@ function createTex7(){
     while (entsRemain > 0){
       entrants.push("");
       entsRemain--;
+      return full;
     }
   }
 
@@ -221,29 +226,30 @@ function createTex7(){
     if (putname === entrants.length*2){
       document.getElementById("texout").value = full;
       console.log(full);
+      return full;
     }
   }
 }
 
 function createTex8(){
-  var midx = "\\begin{tabular}{|p{2.3cm}|p{2.3cm}|p{2.3cm}|p{2.3cm}|p{2.3cm}|p{2.3cm}|p{2.3cm}|p{2.3cm}|p{2.3cm}|} \n\
-      \\hline \n\
-       & xx[1] & xx[2] & xx[3] & xx[4] & xx[5] & xx[6] & xx[7] & xx[8] \\\\\\hline \n\
-      xx[1] & \\multicolumn{1}{c|}{N/A} &&&&&&& \\\\\\hline \n\
-      xx[2] && \\multicolumn{1}{c|}{N/A} &&&&&& \\\\\\hline \n\
-      xx[3] &&& \\multicolumn{1}{c|}{N/A}&&&&& \\\\\\hline \n\
-      xx[4] &&&& \\multicolumn{1}{c|}{N/A}&&&& \\\\\\hline \n\
-      xx[5] &&&&& \\multicolumn{1}{c|}{N/A}&&& \\\\\\hline \n\
-      xx[6] &&&&&& \\multicolumn{1}{c|}{N/A}&& \\\\\\hline \n\
-      xx[7] &&&&&&& \\multicolumn{1}{c|}{N/A}& \\\\\\hline \n\
-      xx[8] &&&&&&&& \\multicolumn{1}{c|}{N/A} \\\\\\hline \n\
-    \\end{tabular}\\\\ \n\ "
-  var top = "\\documentclass[40pt]{article} \n\
-  \\usepackage[landscape, margin=1cm]{geometry} \n\
-    \\bgroup \n\
-    \\LARGE \n\
-    \\def\\arraystretch{2.6} \n\ ";
-  var bot = "    \\egroup \n\
+  var midx = "\\begin{tabular}{|p{2.3cm}|p{2.3cm}|p{2.3cm}|p{2.3cm}|p{2.3cm}|p{2.3cm}|p{2.3cm}|p{2.3cm}|p{2.3cm}|} [newline]\
+      \\hline [newline]\
+       & xx[1] & xx[2] & xx[3] & xx[4] & xx[5] & xx[6] & xx[7] & xx[8] \\\\\\hline [newline]\
+      xx[1] & \\multicolumn{1}{c|}{N/A} &&&&&&& \\\\\\hline [newline]\
+      xx[2] && \\multicolumn{1}{c|}{N/A} &&&&&& \\\\\\hline [newline]\
+      xx[3] &&& \\multicolumn{1}{c|}{N/A}&&&&& \\\\\\hline [newline]\
+      xx[4] &&&& \\multicolumn{1}{c|}{N/A}&&&& \\\\\\hline [newline]\
+      xx[5] &&&&& \\multicolumn{1}{c|}{N/A}&&& \\\\\\hline [newline]\
+      xx[6] &&&&&& \\multicolumn{1}{c|}{N/A}&& \\\\\\hline [newline]\
+      xx[7] &&&&&&& \\multicolumn{1}{c|}{N/A}& \\\\\\hline [newline]\
+      xx[8] &&&&&&&& \\multicolumn{1}{c|}{N/A} \\\\\\hline [newline]\
+    \\end{tabular}\\\\ [newline]\ "
+  var top = "\\documentclass[40pt]{article} [newline]\
+  \\usepackage[landscape, margin=1cm]{geometry} [newline]\
+    \\bgroup [newline]\
+    \\LARGE [newline]\
+    \\def\\arraystretch{2.6} [newline]\ ";
+  var bot = "    \\egroup [newline]\
       \\end{document} ";
    //Input taken from select on site
   var entPerPool = document.getElementById("selNumPool").value;
@@ -288,30 +294,31 @@ function createTex8(){
     if (putname === entrants.length*2){
       document.getElementById("texout").value = full;
       console.log(full);
+      return full;
     }
   }
 }
 
 function createTex9(){
-  var midx ="\\begin{tabular}{|p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|} \\hline \n\
-		 & xx[1] & xx[2] & xx[3] & xx[4] & xx[5] & xx[6] & xx[7] & xx[8] & xx[9] \\\\\\hline \n\
-		xx[1] & \\multicolumn{1}{c|}{N/A} &&&&&&&& \\\\\\hline \n\
-		xx[2] && \\multicolumn{1}{c|}{N/A} &&&&&&& \\\\\\hline \n\
-		xx[3] &&& \\multicolumn{1}{c|}{N/A}&&&&&& \\\\\\hline \n\
-		xx[4] &&&& \\multicolumn{1}{c|}{N/A}&&&&& \\\\\\hline \n\
-		xx[5] &&&&& \\multicolumn{1}{c|}{N/A}&&&& \\\\\\hline \n\
-		xx[6] &&&&&& \\multicolumn{1}{c|}{N/A}&&& \\\\\\hline \n\
-		xx[7] &&&&&&& \\multicolumn{1}{c|}{N/A}&& \\\\\\hline \n\
-		xx[8] &&&&&&&& \\multicolumn{1}{c|}{N/A}& \\\\\\hline \n\
-		xx[9] &&&&&&&&& \\multicolumn{1}{c|}{N/A}  \\\\\\hline \n\
-	\\end{tabular}\\\\ \n\ ";
-  var top = "\\documentclass[40pt]{article} \n\
-  \\usepackage[landscape, margin=1cm]{geometry} \n\
-  \\begin{document} \n\
-    \\bgroup \n\
-    \\LARGE \n\
-    \\def\\arraystretch{2.3} \n\ ";
-  var bot = "    \\egroup \n\
+  var midx ="\\begin{tabular}{|p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|} \\hline [newline]\
+		 & xx[1] & xx[2] & xx[3] & xx[4] & xx[5] & xx[6] & xx[7] & xx[8] & xx[9] \\\\\\hline [newline]\
+		xx[1] & \\multicolumn{1}{c|}{N/A} &&&&&&&& \\\\\\hline [newline]\
+		xx[2] && \\multicolumn{1}{c|}{N/A} &&&&&&& \\\\\\hline [newline]\
+		xx[3] &&& \\multicolumn{1}{c|}{N/A}&&&&&& \\\\\\hline [newline]\
+		xx[4] &&&& \\multicolumn{1}{c|}{N/A}&&&&& \\\\\\hline [newline]\
+		xx[5] &&&&& \\multicolumn{1}{c|}{N/A}&&&& \\\\\\hline [newline]\
+		xx[6] &&&&&& \\multicolumn{1}{c|}{N/A}&&& \\\\\\hline [newline]\
+		xx[7] &&&&&&& \\multicolumn{1}{c|}{N/A}&& \\\\\\hline [newline]\
+		xx[8] &&&&&&&& \\multicolumn{1}{c|}{N/A}& \\\\\\hline [newline]\
+		xx[9] &&&&&&&&& \\multicolumn{1}{c|}{N/A}  \\\\\\hline [newline]\
+	\\end{tabular}\\\\ [newline]\ ";
+  var top = "\\documentclass[40pt]{article} [newline]\
+  \\usepackage[landscape, margin=1cm]{geometry} [newline]\
+  \\begin{document} [newline]\
+    \\bgroup [newline]\
+    \\LARGE [newline]\
+    \\def\\arraystretch{2.3} [newline]\ ";
+  var bot = "    \\egroup [newline]\
       \\end{document} ";
    //Input taken from select on site
   var entPerPool = document.getElementById("selNumPool").value;
@@ -356,6 +363,8 @@ function createTex9(){
     if (putname === entrants.length*2){
       document.getElementById("texout").value = full;
       console.log(full);
+      return full;
+
     }
   }
 }
