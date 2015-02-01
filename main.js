@@ -43,7 +43,7 @@ function createTex5() {
   \\begin{document} [newline]\
     \\bgroup [newline]\
      [newline]\
-    \\def\\arraystretch{6} [newline]\ ";
+    \\def\\arraystretch{5} [newline]\ ";
   var bot = "    \\egroup [newline]\
       \\end{document} ";
   var entPerPool = document.getElementById("selNumPool").value;
