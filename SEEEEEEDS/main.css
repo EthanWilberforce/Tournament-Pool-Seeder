@@ -1,0 +1,75 @@
+/*Layout*/
+#wrapper {
+    width:960px;
+    height:900px;
+    margin:0px auto;
+    border:0px solid blue;
+    padding:0px;
+}
+#wrapper div{
+  border:0px solid black;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+  background:#d1f1f8;
+}
+  #header {
+    width:939px;
+    text-align:center;
+    padding:10px;
+  }
+  #instr{
+    width:917px;
+    margin:10px;
+    margin-top:10px;
+    padding:10px;
+  }
+  #entPer{
+    width:310px;
+    margin:10px;
+    margin-top:5px;
+    padding:10px;
+  }
+  #restr{
+    width:310px;
+    margin:10px;
+    padding:10px;
+  }
+  #entrants{
+    float:right;
+    width:580px;
+    height: 225px;
+    margin:0px 10px;
+    padding:10px;
+  }
+  #howitworks{
+    width:917px;
+    margin:10px;
+    margin-top:5px;
+    padding:10px;
+  }
+  #footer{
+    width:933px;
+    margin:10px;
+    margin-top:5px;
+    padding:2px;
+    font:10pt Arial;
+    text-align:center;
+  }
+/*Markup definitions*/
+body{
+  font: 12pt Arial;
+  /*color:#58c7dd; light blue content text */
+  /*background:white; */
+  color:#228a9e;
+  background-image: url("seed.jpg");
+}
+textarea{
+  font-size:12pt;
+  width:98%;
+  margin:3px 3px;
+}
+b{
+  font:13pt Arial;
+  /*color:#228a9e; Dark blue bolds */
+  color:#686c3a;
+}
