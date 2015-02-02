@@ -24,7 +24,10 @@ function makeTex(){
   if (entPerPool == 9){
     TeX = createTex9();
   }
-  location.href= "http://qas.im/projects/ethan/tex2pdf.php?tex=" + encodeURIComponent(TeX);
+  console.log(TeX);
+  document.getElementById("tex").value = encodeURIComponent(TeX);
+  document.getElementById("tex2pdf").submit();
+  /*location.href= "http://qas.im/projects/ethan/tex2pdf.php?tex=" + encodeURIComponent(TeX);*/
 }
 
 //createTex5-9 all build arrays of entrants into different table sizes
