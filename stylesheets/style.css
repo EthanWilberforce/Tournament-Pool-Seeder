@@ -15,8 +15,9 @@ p {
 }
 textarea {
   font-size:12pt;
-  width:100%;
+  width:99%;
   height:170px;
+  background: #ddd;
 }
 select {
    width: 190px;
