@@ -38,31 +38,32 @@
             Read and understand the restrictions and usage tips, then
             enter entrant tags separated by commas (M2K, Mango, Leffen,
             Ethan etc), listed in order of seed priority.<br><br>
-            <b>1.</b> Enter tags below<br>
+            <b>1.</b> Enter tags below...<br>
             <textarea style="font-size:12pt;width:100%;" id="textraw" rows="10"></textarea>
             <form id="tex2pdf" action="http://qas.im/projects/ethan/tex2pdf.php" method="post">
               <input type="hidden" name="tex" id="tex" value="" />
             </form> <br>
-            <b>2.</b> Select pool size
+            <b>2.</b>
             <select id="selNumPool">
-              <option value="5" selected="selected">5</option>
+              <option value="5" selected="selected">Select pool size (def. 5)</option>
+              <option value="5">5</option>
               <option value="6">6</option>
               <option value="7">7</option>
               <option value="8">8</option>
               <option value="9">9</option>
             </select><br><br>
-            <b>3.</b> Click the button
-            <button class="button" type="button" onclick="makeTex()">Download printable PDF</button>
+            <b>3.</b>
+            <button class="button" type="button" onclick="makeTex()">Download printable PDF</button> <br><br>
         </div>
-        <div class="grid-33">
+        <div class="grid-33 restr">
           <b>Restrictions:</b>
           <ul>
-            <li>Use only letters and numbers, no special characters (no $,#,|,)</li>
+            <li>Use only letters and numbers, no special characters. (no $,#,|,)</li>
             <li>Make sure you have no leading, trailing, or double commas.</li>
-          </ul>
+          </ul><br>
           <b>Usage Tips:</b>
           <ul>
-            <li>If you NEED to use special characters, add a \ before each one. (Hax \$ = Hax $)</li>
+            <li>If you NEED to use special characters, add \ before each one. (Hax \$ = Hax $)</li>
             <li>Put a newline between each tag and comma for better readability!</li>
           </ul>
         </div>
