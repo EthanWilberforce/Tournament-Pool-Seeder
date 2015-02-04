@@ -1,83 +1,96 @@
-<!Doctype html>
-
-<head>
-  <title>Pool Seeder</title>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <title>Pool Seeder</title>
+    <link rel="stylesheet" type="text/css" href="stylesheets/grid.css"/>
+    <link rel="stylesheet" type="text/css" href="stylesheets/style.css"/>
 
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link rel="stylesheet" href="main.css">
-
-    <link rel="apple-touch-icon" sizes="57x57" href="/img/apple-touch-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="/img/apple-touch-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/img/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="/img/apple-touch-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/img/apple-touch-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="/img/apple-touch-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="/img/apple-touch-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/img/apple-touch-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon-180x180.png">
-    <link rel="icon" type="image/png" href="/img/favicon-32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="/img/android-chrome-192x192.png" sizes="192x192">
-    <link rel="icon" type="image/png" href="/img/favicon-96x96.png" sizes="96x96">
-    <link rel="icon" type="image/png" href="/img/favicon-16x16.png" sizes="16x16">
-    <link rel="manifest" href="/img/android-chrome-manifest.json">
-    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link rel="apple-touch-icon" sizes="57x57" href="img/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="img/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="img/android-chrome-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="img/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="img/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="img/android-chrome-manifest.json">
+    <link rel="shortcut icon" href="img/favicon.ico">
     <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="msapplication-TileImage" content="/img/mstile-144x144.png">
-    <meta name="msapplication-config" content="/img/browserconfig.xml">
+    <meta name="msapplication-TileImage" content="img/mstile-144x144.png">
+    <meta name="msapplication-config" content="img/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
-</head>
-<body>
-  <center>
-    <div id="header" class="fixed-nav-bar">
-      <div id="inheaderwrap">
-        <div id="headertitle"><p>Pool Seeder</p></div>
-      </div>
-  </center>
-  <div id="wrapper">
-    <div id="header"></div>
-      <div id="content">
-        <div id="content-left">
-          <p>
-            Enter entrant tags separated by commas (ex/ M2K, Mango, Leffen, Ethan etc), listed in order of seed priority.
-          </p>
-          <b>Restrictions:</b>
-          <ul>
-            <li>Use only letters and numbers, no special characters (ex/ no $,#,|,)</li>
-            <li>Make sure you have no leading, trailing, or double commas.</li>
-          </ul>
-          <textarea style="font-size:12pt;width:100%;" id="textraw" rows="10"></textarea>
-          <h3>How does the seeder place names?</h3>
-          <p>
-            The script first adds the first name on the list to the first position on the first graph, then adds the second name to the first position on the third graph, and so on. This process makes sure that everyone who is supposed to get out of pools, likely will.
-          </p>
+  </head>
+  <body>
+    <div class="splash">
+      <div class="grid-container">
+        <div class="grid-100 title">
+          Pool Seeder
         </div>
-        <div id="content-main">
-          <p>
-            How many entrants per pool?
+        <div class="grid-66">
+            Read and understand the restrictions and usage tips, then
+            enter entrant tags separated by commas (M2K, Mango, Leffen,
+            Ethan etc), listed in order of seed priority.<br>
+            <b>1.</b> Enter tags below<br>
+            <textarea style="font-size:12pt;width:100%;" id="textraw" rows="10"></textarea>
+            <form id="tex2pdf" action="http://qas.im/projects/ethan/tex2pdf.php" method="post">
+              <input type="hidden" name="tex" id="tex" value="" />
+            </form>
+            <b>2.</b> Select pool size
             <select id="selNumPool">
               <option value="5" selected="selected">5</option>
               <option value="6">6</option>
               <option value="7">7</option>
               <option value="8">8</option>
               <option value="9">9</option>
-            </select>
-          </p>
+            </select><br><br>
+            <b>3.</b> Click the button
+            <button class="button" type="button" onclick="makeTex()">Download printable PDF</button>
         </div>
-        <div id="content-right">
-          <form id="tex2pdf" action="http://qas.im/projects/ethan/tex2pdf.php" method="post">
-            <input type="hidden" name="tex" id="tex" value="" />
-          </form>
-          <button class="button" type="button" onclick="makeTex()">Download printable PDF</button>
+        <div class="grid-33">
+          <b>Restrictions:</b>
+          <ul>
+            <li>Use only letters and numbers, no special characters (no $,#,|,)</li>
+            <li>Make sure you have no leading, trailing, or double commas.</li>
+          </ul>
+          <b>Usage Tips:</b>
+          <ul>
+            <li>If you NEED to use special characters, add a \ before each one. (Hax \$ = Hax $)</li>
+            <li>Put a newline between each tag and comma for easier readability!</li>
+          </ul>
+        </div>
+        <div class="grid-100 howwork">
+          <b>How it works</b><br>
+          The script first adds the first name on the list to the first position
+          on the first table, then adds the second name to the first position on
+          the third table, and so on. This process makes sure that everyone who is
+           supposed to get out of pools, likely will. <br>Any questions?
+           <a href="mailto:poolseeder@gmail.com">Email me</a>.
+        </div>
+        <div class="grid-100">
+          <p>Feel free to <a href="mailto:poolseeder@gmail.com">email me</a> with
+            any suggestions, feature requests, ideas, love letters, or conspiracy
+            theories. This website's design is
+            <a href="http://poolseeder.me/SEEEEEEDS/">in progress.</a></p>
         </div>
       </div>
-      <div id="footer">
-        <p>Feel free to <a href="mailto:poolseeder@gmail.com">email me</a> with any suggestions, feature requests, love letters, or conspiracy theories. This website's design is <a href="http://poolseeder.me/SEEEEEEDS/">in progress.</a></p>
-      </div>
-      <div id="bottom"></div>
-  </div>
-  <script src="main.js"></script>
-</body>
+    </div>
+    <script src="js/script.js"></script>
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-59335025-1', 'auto');
+    ga('send', 'pageview');
+    </script>
+  </body>
+</html>

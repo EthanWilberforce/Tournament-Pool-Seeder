@@ -3,6 +3,12 @@ function replaceAll(find, replace, str){
   return str.replace(new RegExp(find, 'g'), replace);
 }
 
+
+//Allow Special Characters
+/*function specChar(){
+
+}*/
+
 //controlled by the dropdown menu, chooses which graph type is needed
 function makeTex(){
   var entPerPool = document.getElementById("selNumPool").value;
@@ -46,7 +52,7 @@ function createTex5() {
   \\begin{document} [newline]\
     \\bgroup [newline]\
      [newline]\
-    \\def\\arraystretch{5} [newline]\ ";
+    \\def\\arraystretch{4} [newline]\ ";
   var bot = "    \\egroup [newline]\
       \\end{document} ";
   var entPerPool = document.getElementById("selNumPool").value;
@@ -131,7 +137,7 @@ function createTex6(){
   \\begin{document} [newline]\
     \\bgroup [newline]\
      [newline]\
-    \\def\\arraystretch{5} [newline]\ ";
+    \\def\\arraystretch{4} [newline]\ ";
   var bot = "    \\egroup [newline]\
       \\end{document} ";
    //Input taken from select on site
@@ -197,7 +203,6 @@ function createTex6(){
     }
   }
 }
-
 
 
 function createTex7(){
