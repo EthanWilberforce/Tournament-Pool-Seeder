@@ -38,7 +38,7 @@ function makeTex(){
 
 //createTex5-9 all build arrays of entrants into different table sizes
 function createTex5() {
-  var midx = "\\begin{tabular}{|p{3.4cm}|p{3.4cm}|p{3.4cm}|p{3.4cm}|p{3.4cm}|p{3.4cm}|} [newline]\
+  var midx = "\\begin{tabular}{|p{3.65cm}|p{3.65cm}|p{3.65cm}|p{3.65cm}|p{3.65cm}|p{3.65cm}|} [newline]\
     \\hline [newline]\
      & xx[1] & xx[2] & xx[3] & xx[4] & xx[5] \\\\\\hline [newline]\
     xx[1] & \\multicolumn{1}{c|}{N/A} &&&& \\\\\\hline [newline]\
