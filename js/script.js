@@ -93,7 +93,7 @@ function hyphenate(entrantList, entPerPool) {
   return hyphEntrants;
 }
 
-// Hyphenation functions, differs per size of table
+// Hyphenation functions, differs per size of table to keep tables on one page
 function hyphenate5(entrantList) {
   var hyph5Entrants = entrantList;
   for (var i = 0;i< hyph5Entrants.length;i++){
