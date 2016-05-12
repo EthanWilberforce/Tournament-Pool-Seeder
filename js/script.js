@@ -14,9 +14,13 @@ function makeTex(){
     TeX = createTex(top89, mid9, 9);
   }
 
-  document.getElementById("tex").value = encodeURIComponent(TeX);
-  document.getElementById("tex2pdf").submit();
-  /*location.href= "http://qas.im/projects/ethan/tex2pdf.php?tex=" + encodeURIComponent(TeX);*/
+  if (TeX == -1){ //More than 5000 entrants
+    alert("Please enter less than 5000 entrants.");
+  } else {
+    document.getElementById("tex").value = encodeURIComponent(TeX);
+    document.getElementById("tex2pdf").submit();
+    /*location.href= "http://qas.im/projects/ethan/tex2pdf.php?tex=" + encodeURIComponent(TeX);*/
+  }
 }
 
 function createTex(topx, midx, entPerPool) {
@@ -24,20 +28,22 @@ function createTex(topx, midx, entPerPool) {
   var RAWentrants = document.getElementById("textraw").value;
   var entrants = RAWentrants.split(",").map(Function.prototype.call, String.prototype.trim);
   var numPools = Math.ceil(entrants.length / entPerPool);
-  var entcount = 0;
   var putname = 0;
   var tablenum = 0;
-  var populatePoolNum = 0;
   var tableCount = 0;
   var tablexycount = 0;
   var entsRemain = 0;
   var bot = "    \\egroup [newline]\
       \\end{document} ";
 
+  if (entrants.length > 5000) {
+    return -1;
+  }
+
   //allows arrays of entrants that aren't multiple of the amount of pools in length
   if (entrants.length % entPerPool !== 0){
     var entsRemain = (entPerPool - (entrants.length % entPerPool))
-    var entcount = entrants.length + 1
+    // var entcount = entrants.length + 1
     while (entsRemain > 0){
       entrants.push("");
       entsRemain--;
@@ -93,7 +99,7 @@ function hyphenate(entrantList, entPerPool) {
   return hyphEntrants;
 }
 
-// Hyphenation functions, differs per size of table to keep tables on one page
+// Hyphenation functions, differs per size of table
 function hyphenate5(entrantList) {
   var hyph5Entrants = entrantList;
   for (var i = 0;i< hyph5Entrants.length;i++){
