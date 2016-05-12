@@ -40,7 +40,7 @@
             Ethan etc), listed in order of seed priority.<br><br>
             <b>1.</b> Enter tags below...<br>
             <textarea id="textraw" rows="10"></textarea>
-            <form id="tex2pdf" action="http://qas.im/projects/ethan/tex2pdf.php" method="post">
+            <form id="tex2pdf" action="http://ethanw.ca/projects/pool-seeder/script/tex2pdf.php" method="post">
               <input type="hidden" name="tex" id="tex" value="" />
             </form> <br>
             <b>2.</b>
@@ -61,6 +61,7 @@
             <li>Use only letters and numbers, no special characters. (no $,#,|,)</li>
             <li>Make sure you have no leading, trailing, or double commas.</li>
             <li>Too long names will be hyphenated onto multiple lines.</li>
+            <li>Only supports up to 5000 users.</li>
           </ul><br>
           <b>Usage Tips:</b>
           <ul>
@@ -73,26 +74,23 @@
           The script first adds the first name on the list to the first position
           on the first table, then adds the second name to the first position on
           the third table, and so on. This process makes sure that everyone who is
-           supposed to get out of pools, likely will. <br>Any questions?
-           <a href="mailto:poolseeder@gmail.com">Email me</a>.
+           supposed to get out of pools likely will.
         </div>
         <div class="grid-100">
           <p>Feel free to <a href="mailto:poolseeder@gmail.com">email me</a> with
-            any suggestions, feature requests, ideas, love letters, or conspiracy
-            theories. This website's design is
-            <a href="http://poolseeder.me/SEEEEEEDS/">in progress.</a></p>
+            any questions, suggestions, or feature requests.
         </div>
       </div>
     </div>
     <script src="js/script.js"></script>
     <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-    ga('create', 'UA-59335025-1', 'auto');
-    ga('send', 'pageview');
-    </script>
+	ga('create', 'UA-59009734-3', 'auto');
+	ga('send', 'pageview');
+</script>
   </body>
 </html>
