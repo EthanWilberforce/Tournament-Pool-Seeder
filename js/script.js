@@ -19,7 +19,7 @@ function makeTex(){
   } else {
     document.getElementById("tex").value = encodeURIComponent(TeX);
     document.getElementById("tex2pdf").submit();
-    /*location.href= "http://qas.im/projects/ethan/tex2pdf.php?tex=" + encodeURIComponent(TeX);*/
+    /*location.href= "http://ethanw.ca/projects/pool-seeder/script/tex2pdf.php?tex=" + encodeURIComponent(TeX);*/
   }
 }
 
@@ -43,7 +43,6 @@ function createTex(topx, midx, entPerPool) {
   //allows arrays of entrants that aren't multiple of the amount of pools in length
   if (entrants.length % entPerPool !== 0){
     var entsRemain = (entPerPool - (entrants.length % entPerPool))
-    // var entcount = entrants.length + 1
     while (entsRemain > 0){
       entrants.push("");
       entsRemain--;
